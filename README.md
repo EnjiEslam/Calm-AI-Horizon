@@ -1,29 +1,63 @@
 Calm AI
+Calm AI هو مشروع Front-End اشتغلت عليه كجزء من مشاركتي في Hack Club Horizons.
 
-Calm AI is a web prototype that helps people who experience panic attacks by providing support and calming tools. The idea is to create a simple assistant that helps users understand their feelings, recognize possible triggers, and get support during panic moments.
+الفكرة بدأت لما كنت بقرأ عن نوبات الهلع، ولاحظت إن وقت النوبة الشخص بيكون متوتر جدًا، وممكن ميعرفش حتى يفتح الموبايل أو يطلب مساعدة. وقتها فكرت: "طب ليه ميكونش فيه تطبيق بسيط يساعد الشخص في اللحظات دي؟"
 
-About The Idea:
-Panic attacks can happen suddenly and may cause symptoms like fast heartbeat, difficulty breathing, dizziness, and fear. Many people find it difficult to ask for help during these moments, so Calm AI aims to provide quick and simple support.
+طبعًا المشروع ده مجرد Prototype، يعني هو تصور أولي للفكرة، ولسه مفيهوش ذكاء اصطناعي أو قاعدة بيانات أو Back-End، لكن حبيت أبدأ بتصميم الواجهة اللي ممكن يتبني عليها المشروع بعد كده.
 
-Features:
-1. Panic risk analysis
-2. Breathing exercises
-3. Grounding technique
-4. Emergency support mode
-5. Personal recommendations
-6. User dashboard
+الفكرة
+الفكرة الأساسية هي تصميم تطبيق يساعد الأشخاص اللي بيعانوا من نوبات الهلع، ويكون سهل الاستخدام حتى لو الشخص متوتر.
 
-Technologies:
-- HTML
-- CSS
-- JavaScript
+الفكرة إن المستخدم يقدر يلاقي واجهة بسيطة توضح له إزاي ممكن التطبيق يساعده، ومع الوقت يتحول المشروع لنظام أكبر يقدر يقدم دعم حقيقي.
 
-Future Improvements:
-1. AI prediction model
-2. Smart watch connection
-3. Mobile application
-4. Doctor dashboard
+في المستقبل أتمنى إن المشروع يقدر يربط مع ساعة ذكية، ويستخدم الذكاء الاصطناعي لتحليل بعض البيانات زي معدل ضربات القلب، والنوم، والحركة، وبعدها يقترح طرق بسيطة تساعد المستخدم يهدأ أو يتعامل مع الموقف بشكل أفضل.
 
-Goal:
-The goal of Calm AI is to make panic attack support easier and help users feel safer in their daily life.
+وكمان هدفي إن المشروع في المستقبل ميكونش مجرد تطبيق، لكن يبقى نظام متكامل يربط بين المستخدم والطبيب والأسرة بعد موافقة المستخدم.
+
+الواجهة الحالية
+النسخة الحالية عبارة عن واجهة توضح شكل المشروع وفكرته، وتشمل:
+
+صفحة رئيسية.
+تصميم Responsive بيشتغل على الموبايل والكمبيوتر.
+أقسام بتشرح فكرة المشروع.
+واجهة بسيطة وسهلة الاستخدام.
+بعض التفاعلات البسيطة باستخدام JavaScript.
+لو كملت المشروع
+في المستقبل نفسي أضيف مميزات زي:
+
+AI Assistant.
+Smart Watch Integration.
+Doctor Dashboard.
+Family Dashboard.
+Emergency Mode.
+User Reports.
+تحليل الأنماط المتكررة لنوبات الهلع.
+التقنيات المستخدمة
+المشروع اتعمل باستخدام:
+
+HTML
+CSS
+JavaScript
+كنت ناوية أبدأ جزء بسيط باستخدام Python علشان يكون بداية للـ AI، لكن بسبب ضيق الوقت فضلت أركز الأول على الواجهة وأحاول أطلعها بشكل منظم، وإن شاء الله أكمل الجزء ده بعدين.
+
+إيه اللي اتعلمته؟
+المشروع ده ساعدني أطبق اللي اتعلمته وأفهم أكتر إزاي أبني واجهة ويب بشكل منظم.
+
+ومن أكتر الحاجات اللي استفدتها:
+
+تنظيم ملفات المشروع.
+تقسيم الصفحات بطريقة أوضح.
+تحسين التصميم باستخدام CSS.
+إضافة تفاعلات بسيطة بـ JavaScript.
+إن التخطيط قبل كتابة الكود بيوفر وقت كبير بعدين.
+وبرضو حسيت إن أي فكرة، حتى لو كانت بسيطة، ممكن تتحول لحاجة كويسة لو الواحد بدأ فيها وطورها خطوة بخطوة.
+
+ملاحظات
+المشروع ده مجرد Prototype لعرض الفكرة، ولسه محتاج شغل كتير علشان يتحول لتطبيق كامل.
+
+حابّة أكمل تطويره بعد الهاكاثون، وأضيف المميزات اللي كنت مخططة لها من البداية، خصوصًا الجزء الخاص بالذكاء الاصطناعي وربط الساعات الذكية.
+
+Thanks for checking out my project ❤️
+
+Created by Enji Eslam
 
