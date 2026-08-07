@@ -1,154 +1,48 @@
 
-:root {
-    /* Primary brand colors - the main color scheme */
-    --primary: #4A6CF7;
-    --primary-dark: #3651D4;
-    --primary-light: #E8EDFD;
-    
-    /* Secondary and accent colors for variety and emphasis */
-    --secondary: #6C63FF;
-    --accent: #FF6B6B;
-    --success: #22C55E;
-    --warning: #F59E0B;
-    
-    /* Dark colors used for text and dark backgrounds */
-    --dark: #1A1A2E;
-    --dark-secondary: #16213E;
-    
-    /* Gray colors for subtle text and borders */
-    --gray: #8892B0;
-    --gray-light: #E2E8F0;
-    
-    /* Background and white colors */
-    --bg: #F0F4FF;
-    --white: #FFFFFF;
-    
-    /* Box shadows for depth and hover effects */
-    --shadow: 0 20px 60px rgba(74, 108, 247, 0.12);
-    --shadow-hover: 0 30px 80px rgba(74, 108, 247, 0.18);
-    
-    /* Border radius values for rounded corners */
-    --radius: 20px;
-    --radius-sm: 12px;
-    
-    /* Transition for smooth animations on hover and state changes */
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Calm AI - Styles */
 
-/* ----- Reset & Base Styles ----- */
-/* Every browser has default styles for margins, padding, and
-   box-sizing. This reset removes those defaults so we start
-   from a clean slate and have consistent styling across
-   all browsers. */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Enables smooth scrolling behavior for anchor links */
-html {
-    scroll-behavior: smooth;
+:root {
+    --primary: #4A6CF7;
+    --dark: #1A1A2E;
+    --gray: #8892B0;
+    --bg: #F0F4FF;
+    --white: #FFFFFF;
+    --shadow: 0 20px 60px rgba(74,108,247,0.12);
 }
 
-/* Base styles for the body element - sets the font, background
-   color, text color, line height, and prevents horizontal scroll */
 body {
     font-family: 'Cairo', sans-serif;
     background: var(--bg);
     color: var(--dark);
     line-height: 1.7;
-    overflow-x: hidden;
 }
 
-/* Removes the default underline from all links */
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* Removes bullets and numbers from all lists */
 ul {
     list-style: none;
 }
 
-/* Container class - centers content horizontally and adds
-   consistent padding on both sides for all screen sizes */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* ----- Custom Scrollbar ----- */
-/* Browsers have different default scrollbar styles. This
-   customizes the scrollbar to match our theme with a blue
-   thumb and light background. */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: var(--bg);
-}
-::-webkit-scrollbar-thumb {
-    background: var(--primary);
-    border-radius: 10px;
-}
-
-/* ----- Text Selection ----- */
-/* When users select text on the page, it highlights with the
-   primary blue color instead of the default browser blue */
-::selection {
-    background: var(--primary);
-    color: white;
-}
-
-/* ----- Section Header ----- */
-/* Each section starts with a header that includes a tag label,
-   a main title, and a description. This component is reused
-   across all sections for visual consistency. */
-.section-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-/* The tag is a small badge that appears above the section title */
-.section-tag {
-    display: inline-block;
-    padding: 6px 20px;
-    background: var(--primary-light);
-    color: var(--primary);
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-/* Main section title - big and bold with a highlight color */
-.section-title {
-    font-size: 38px;
-    font-weight: 900;
-    margin-bottom: 16px;
-    line-height: 1.2;
-}
-
-/* Highlight text within titles using the primary color */
-.section-title .highlight {
-    color: var(--primary);
-}
-
-/* Description text below the title - smaller and gray */
-.section-desc {
-    font-size: 18px;
-    color: var(--gray);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* ----- Buttons ----- */
-/* Reusable button styles used throughout the site for calls to
-   action. There are two types: primary (filled) and secondary
-   (outlined). Both have hover effects for interactivity. */
+/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -157,40 +51,35 @@ ul {
     border-radius: 50px;
     font-weight: 700;
     font-size: 16px;
-    transition: var(--transition);
+    transition: 0.3s;
     border: none;
     cursor: pointer;
     font-family: 'Cairo', sans-serif;
 }
 
-/* Primary button - solid background with brand color */
-.btn-primary {
+.btn.primary {
     background: var(--primary);
     color: white;
 }
 
-.btn-primary:hover {
+.btn.primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(74, 108, 247, 0.35);
+    box-shadow: 0 15px 40px rgba(74,108,247,0.35);
 }
 
-/* Secondary button - transparent with border */
-.btn-secondary {
+.btn.secondary {
     background: transparent;
     color: var(--primary);
     border: 2px solid var(--primary);
 }
 
-.btn-secondary:hover {
+.btn.secondary:hover {
     background: var(--primary);
     color: white;
     transform: translateY(-3px);
 }
 
-/* ----- Header / Navigation ----- */
-/* The header is fixed at the top of the page and stays visible
-   while scrolling. It has a glass-morphism effect with a blur
-   background. When scrolled, it becomes more opaque. */
+/* Header */
 .header {
     position: fixed;
     top: 0;
@@ -198,27 +87,23 @@ ul {
     right: 0;
     z-index: 1000;
     padding: 16px 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255,255,255,0.85);
     backdrop-filter: blur(20px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
-    transition: var(--transition);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    transition: 0.3s;
 }
 
-/* When the user scrolls down, the header becomes more solid */
 .header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.08);
 }
 
-/* Flex layout for header contents - logo on left, nav in middle,
-   actions on right */
 .header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* Logo area with heart icon and text */
 .logo {
     display: flex;
     align-items: center;
@@ -236,7 +121,6 @@ ul {
     color: var(--primary);
 }
 
-/* Navigation links in a horizontal row */
 .navbar ul {
     display: flex;
     gap: 30px;
@@ -245,12 +129,11 @@ ul {
 .navbar ul li a {
     font-weight: 600;
     font-size: 15px;
-    transition: var(--transition);
-    position: relative;
+    transition: 0.3s;
     padding: 4px 0;
+    position: relative;
 }
 
-/* Underline animation effect on hover */
 .navbar ul li a::after {
     content: '';
     position: absolute;
@@ -259,7 +142,7 @@ ul {
     width: 0;
     height: 2px;
     background: var(--primary);
-    transition: var(--transition);
+    transition: 0.3s;
 }
 
 .navbar ul li a:hover::after,
@@ -271,27 +154,25 @@ ul {
     color: var(--primary);
 }
 
-/* Header actions - language toggle and mobile menu button */
 .header-actions {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-/* Language toggle button */
 .lang-btn {
     display: flex;
     align-items: center;
     gap: 6px;
     padding: 8px 16px;
-    border: 2px solid var(--gray-light);
+    border: 2px solid #E2E8F0;
     background: transparent;
     border-radius: 50px;
     font-weight: 600;
     font-size: 14px;
     color: var(--gray);
     cursor: pointer;
-    transition: var(--transition);
+    transition: 0.3s;
     font-family: 'Cairo', sans-serif;
 }
 
@@ -300,7 +181,6 @@ ul {
     color: var(--primary);
 }
 
-/* Mobile menu button - hidden on desktop, shown on mobile */
 .menu-btn {
     display: none;
     background: none;
@@ -311,33 +191,17 @@ ul {
     padding: 4px 8px;
 }
 
-/* ----- Hero Section ----- */
-/* The hero is the main landing section. It has a gradient
-   background and includes the main headline, description,
-   buttons, statistics, and an animated illustration. */
+/* Hero */
 .hero {
     padding: 160px 0 80px;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+    background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
     position: relative;
     overflow: hidden;
 }
 
-/* Decorative circle in the background for visual interest */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: -30%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(74, 108, 247, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
-/* Two-column grid for hero content - text on left, image on right */
 .hero .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -347,18 +211,16 @@ ul {
     z-index: 2;
 }
 
-/* Hero text content with fade-in animation */
-.hero-content {
-    animation: fadeInUp 0.8s ease;
+.hero .content {
+    animation: fadeUp 0.8s ease;
 }
 
-/* Badge above the title */
-.hero-badge {
+.hero .badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 6px 18px;
-    background: rgba(74, 108, 247, 0.1);
+    background: rgba(74,108,247,0.1);
     border-radius: 50px;
     font-size: 14px;
     font-weight: 600;
@@ -366,70 +228,61 @@ ul {
     margin-bottom: 20px;
 }
 
-/* Main hero title - large and bold */
-.hero-title {
+.hero .title {
     font-size: 52px;
     font-weight: 900;
     line-height: 1.15;
     margin-bottom: 20px;
 }
 
-.hero-title .highlight {
+.hero .title .blue {
     color: var(--primary);
 }
 
-/* Description text */
-.hero-desc {
+.hero .desc {
     font-size: 18px;
     color: var(--gray);
     line-height: 1.8;
     margin-bottom: 30px;
 }
 
-.hero-desc strong {
-    color: var(--dark);
-}
-
-/* Button group */
-.hero-buttons {
+.hero .btns {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
-/* Statistics display */
-.hero-stats {
+.hero .stats {
     display: flex;
     gap: 40px;
     padding-top: 30px;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 1px solid rgba(0,0,0,0.06);
 }
 
-.hero-stat {
+.hero .stat {
     display: flex;
     flex-direction: column;
 }
 
-.hero-stat .stat-number {
+.hero .stat .num {
     font-size: 28px;
     font-weight: 900;
     color: var(--dark);
 }
 
-.hero-stat .stat-label {
+.hero .stat .label {
     font-size: 14px;
     color: var(--gray);
 }
 
-/* Hero image / illustration area */
-.hero-image {
+.hero .image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hero-illustration {
+.hero .illustration {
     position: relative;
     width: 400px;
     height: 400px;
@@ -438,26 +291,24 @@ ul {
     justify-content: center;
 }
 
-/* Main pulsing circle with brain icon */
-.circle-animation {
+.hero .circle {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, var(--primary), #6C63FF);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 30px 80px rgba(74, 108, 247, 0.3);
+    box-shadow: 0 30px 80px rgba(74,108,247,0.3);
     animation: pulse 3s ease-in-out infinite;
 }
 
-.circle-animation i {
+.hero .circle i {
     font-size: 80px;
     color: white;
 }
 
-/* Floating icons around the main circle */
-.floating-icons {
+.hero .floating {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -465,7 +316,7 @@ ul {
     left: 0;
 }
 
-.float-icon {
+.hero .floating .icon {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -475,62 +326,60 @@ ul {
     align-items: center;
     justify-content: center;
     font-size: 22px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     animation: float 6s ease-in-out infinite;
 }
 
-.float-icon.heart {
+.hero .floating .heart {
     top: 10%;
     right: 10%;
     color: #FF6B6B;
     animation-delay: 0s;
 }
 
-.float-icon.breath {
+.hero .floating .breath {
     bottom: 20%;
     left: 5%;
     color: #4A6CF7;
     animation-delay: 1.5s;
 }
 
-.float-icon.calm {
+.hero .floating .calm {
     top: 50%;
     right: -5%;
     color: #22C55E;
     animation-delay: 3s;
 }
 
-/* ----- About Section ----- */
-/* The about section explains why Calm AI was created with
-   three value proposition cards. */
+/* About */
 .about {
     padding: 80px 0;
     background: var(--white);
 }
 
-.about-grid {
+.about .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-.about-card {
+.about .card {
     background: var(--bg);
     padding: 35px 30px;
-    border-radius: var(--radius);
+    border-radius: 20px;
     text-align: center;
-    transition: var(--transition);
+    transition: 0.3s;
 }
 
-.about-card:hover {
+.about .card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 30px 80px rgba(74,108,247,0.18);
 }
 
-.about-icon {
+.about .card .icon {
     width: 70px;
     height: 70px;
-    background: var(--primary-light);
+    background: #E8EDFD;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -540,113 +389,107 @@ ul {
     color: var(--primary);
 }
 
-.about-card h3 {
+.about .card h3 {
     font-size: 20px;
     margin-bottom: 8px;
 }
 
-.about-card p {
+.about .card p {
     color: var(--gray);
     font-size: 15px;
 }
 
-/* ----- Features Section ----- */
-/* Displays 6 features in a grid layout with icons and tags */
+/* Features */
 .features {
     padding: 80px 0;
     background: var(--bg);
 }
 
-.features-grid {
+.features .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-.feature-card {
+.features .card {
     background: var(--white);
     padding: 35px 25px;
-    border-radius: var(--radius);
+    border-radius: 20px;
     text-align: center;
-    transition: var(--transition);
+    transition: 0.3s;
     box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
 }
 
-.feature-card:hover {
+.features .card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 30px 70px rgba(74,108,247,0.15);
 }
 
-.feature-card .feature-icon {
+.features .card .icon {
     font-size: 40px;
     color: var(--primary);
     margin-bottom: 12px;
 }
 
-.feature-card h3 {
+.features .card h3 {
     font-size: 20px;
     margin-bottom: 8px;
 }
 
-.feature-card p {
+.features .card p {
     color: var(--gray);
     font-size: 15px;
     margin-bottom: 12px;
 }
 
-.feature-tag {
+.features .card .tag {
     display: inline-block;
     padding: 4px 14px;
-    background: var(--primary-light);
+    background: #E8EDFD;
     color: var(--primary);
     border-radius: 50px;
     font-size: 12px;
     font-weight: 700;
 }
 
-/* ----- Tools Section ----- */
-/* Interactive tools: breathing exercise, grounding technique,
-   and emergency support. Each tool is in a card with a header
-   and body. */
+/* Tools */
 .tools {
     padding: 80px 0;
     background: var(--white);
 }
 
-.tools-grid {
+.tools .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-.tool-card {
+.toolBox {
     background: var(--bg);
-    border-radius: var(--radius);
+    border-radius: 20px;
     overflow: hidden;
-    transition: var(--transition);
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: 0.3s;
+    border: 1px solid rgba(0,0,0,0.04);
 }
 
-.tool-card:hover {
+.toolBox:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 30px 80px rgba(74,108,247,0.18);
 }
 
-.tool-card .tool-header {
+.toolBox .toolHead {
     padding: 20px 25px;
     background: var(--white);
     display: flex;
     align-items: center;
     gap: 14px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 
-.tool-card .tool-icon {
+.toolBox .toolHead .icon {
     width: 45px;
     height: 45px;
-    background: var(--primary-light);
+    background: #E8EDFD;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -655,165 +498,161 @@ ul {
     color: var(--primary);
 }
 
-.tool-card .tool-header h3 {
+.toolBox .toolHead h3 {
     font-size: 18px;
 }
 
-.tool-card .tool-body {
+.toolBox .toolBody {
     padding: 25px;
 }
 
-/* Breathing Exercise - Circle that expands and contracts */
-.breathing-circle {
+/* Breathing */
+.breathCircle {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    background: linear-gradient(135deg, #E8EDFD, var(--primary));
     margin: 0 auto 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(74, 108, 247, 0.2);
+    box-shadow: 0 10px 30px rgba(74,108,247,0.2);
 }
 
-.breathing-circle.active {
+.breathCircle.active {
     transform: scale(0.6);
     background: linear-gradient(135deg, #22C55E, #16A34A);
 }
 
-.breathing-circle #breathText {
+.breathCircle #breathText {
     font-size: 20px;
     font-weight: 700;
     color: white;
 }
 
-.breathing-controls {
+.breathControls {
     display: flex;
     gap: 10px;
     justify-content: center;
     margin-bottom: 12px;
 }
 
-/* Tool buttons */
-.tool-btn {
+.toolBtn {
     padding: 10px 24px;
     border: none;
     border-radius: 50px;
     font-weight: 600;
     font-size: 14px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: 0.3s;
     font-family: 'Cairo', sans-serif;
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-.tool-btn {
-    background: var(--gray-light);
+    background: #E2E8F0;
     color: var(--dark);
 }
 
-.tool-btn:hover {
+.toolBtn:hover {
     background: var(--primary);
     color: white;
 }
 
-.tool-btn.primary {
+.toolBtn.primary {
     background: var(--primary);
     color: white;
     width: 100%;
     justify-content: center;
 }
 
-.tool-btn.primary:hover {
+.toolBtn.primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(74, 108, 247, 0.3);
+    box-shadow: 0 10px 30px rgba(74,108,247,0.3);
 }
 
-.breathing-info {
+.breathInfo {
     text-align: center;
     font-size: 14px;
     color: var(--gray);
 }
 
-.breathing-info #breathCount {
+.breathInfo #breathCount {
     font-weight: 900;
     color: var(--dark);
     font-size: 24px;
 }
 
-/* Grounding Technique - 5-4-3-2-1 steps */
-.grounding-steps {
+/* Grounding */
+.groundSteps {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 8px;
     margin-bottom: 20px;
 }
 
-.grounding-step {
+.groundSteps .step {
     text-align: center;
     padding: 12px 6px;
     background: var(--white);
-    border-radius: var(--radius-sm);
-    transition: var(--transition);
+    border-radius: 12px;
+    transition: 0.3s;
     cursor: pointer;
     border: 2px solid transparent;
 }
 
-.grounding-step.active {
+.groundSteps .step.active {
     border-color: var(--primary);
-    background: var(--primary-light);
+    background: #E8EDFD;
 }
 
-.grounding-step .step-num {
+.groundSteps .step .num {
     display: block;
     font-size: 28px;
     font-weight: 900;
     color: var(--primary);
 }
 
-.grounding-step .step-label {
+.groundSteps .step .label {
     font-size: 11px;
     color: var(--gray);
 }
 
-.grounding-progress {
+.groundProgress {
     width: 100%;
     height: 4px;
-    background: var(--gray-light);
+    background: #E2E8F0;
     border-radius: 10px;
     margin-top: 16px;
     overflow: hidden;
 }
 
-.progress-bar {
+.groundProgress .bar {
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    background: linear-gradient(90deg, var(--primary), #6C63FF);
     border-radius: 10px;
     transition: width 0.5s ease;
 }
 
-/* Emergency Support - Red themed card */
-.tool-card.emergency {
+/* Emergency */
+.toolBox.emergency {
     border: 2px solid #FF6B6B;
     background: #FFF5F5;
 }
 
-.emergency-icon {
+.emergencyIcon {
     font-size: 48px;
     color: #FF6B6B;
     margin-bottom: 12px;
 }
 
-.emergency-list {
+.emergencyList {
     text-align: right;
     margin: 12px 0 20px;
 }
 
-.emergency-list li {
+.emergencyList li {
     padding: 6px 0;
     display: flex;
     align-items: center;
@@ -821,21 +660,21 @@ ul {
     font-size: 14px;
 }
 
-.emergency-list li i {
-    color: var(--success);
+.emergencyList li i {
+    color: #22C55E;
 }
 
-.emergency-btn {
+.emergencyBtn {
     width: 100%;
     padding: 14px;
     background: #FF6B6B;
     color: white;
     border: none;
-    border-radius: var(--radius-sm);
+    border-radius: 12px;
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: 0.3s;
     font-family: 'Cairo', sans-serif;
     display: flex;
     align-items: center;
@@ -843,56 +682,55 @@ ul {
     gap: 10px;
 }
 
-.emergency-btn:hover {
+.emergencyBtn:hover {
     background: #E55A5A;
     transform: scale(1.02);
 }
 
-/* ----- Dashboard Section ----- */
-/* Displays user statistics in cards and a chart */
+/* Dashboard */
 .dashboard {
     padding: 80px 0;
     background: var(--bg);
 }
 
-.dashboard-grid {
+.dashboard .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-bottom: 40px;
 }
 
-.dashboard-card {
+.dashboard .card {
     background: var(--white);
     padding: 25px;
-    border-radius: var(--radius);
+    border-radius: 20px;
     box-shadow: var(--shadow);
 }
 
-.dashboard-card .card-icon {
+.dashboard .card .icon {
     font-size: 28px;
     color: var(--primary);
     margin-bottom: 8px;
 }
 
-.dashboard-card .card-label {
+.dashboard .card .label {
     font-size: 14px;
     color: var(--gray);
 }
 
-.dashboard-card .card-value {
+.dashboard .card .value {
     font-size: 32px;
     font-weight: 900;
     color: var(--dark);
 }
 
-.dashboard-card .card-unit {
+.dashboard .card .unit {
     font-size: 16px;
     color: var(--gray);
     margin-right: 4px;
 }
 
-.card-change {
+.dashboard .change {
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -903,35 +741,34 @@ ul {
     margin-top: 6px;
 }
 
-.card-change.positive {
+.dashboard .change.good {
     background: #DCFCE7;
     color: #16A34A;
 }
 
-.card-change.negative {
+.dashboard .change.bad {
     background: #FEE2E2;
     color: #DC2626;
 }
 
-.card-change.neutral {
+.dashboard .change.neutral {
     background: #F3F4F6;
     color: #6B7280;
 }
 
-/* Chart for weekly panic trends */
-.chart-container {
+.chartBox {
     background: var(--white);
     padding: 30px;
-    border-radius: var(--radius);
+    border-radius: 20px;
     box-shadow: var(--shadow);
 }
 
-.chart-container h4 {
+.chartBox h4 {
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-.chart-bars {
+.chartBars {
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -939,9 +776,9 @@ ul {
     gap: 20px;
 }
 
-.chart-bar {
+.chartBars .bar {
     flex: 1;
-    background: linear-gradient(180deg, var(--primary), var(--secondary));
+    background: linear-gradient(180deg, var(--primary), #6C63FF);
     border-radius: 8px 8px 0 0;
     min-height: 20px;
     display: flex;
@@ -951,136 +788,137 @@ ul {
     transition: height 1s ease;
 }
 
-.chart-bar span {
+.chartBars .bar span {
     font-size: 12px;
     color: white;
     font-weight: 600;
 }
 
-/* ----- Footer ----- */
-/* Dark footer with brand info, quick links, and resources */
+/* Title helper */
+.title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title .tag {
+    display: inline-block;
+    padding: 6px 20px;
+    background: #E8EDFD;
+    color: var(--primary);
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.title h2 {
+    font-size: 38px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.title h2 .blue {
+    color: var(--primary);
+}
+
+.title .desc {
+    font-size: 18px;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer */
 .footer {
     padding: 60px 0 30px;
     background: var(--dark);
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255,255,255,0.7);
 }
 
-.footer-content {
+.footer .content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 40px;
     margin-bottom: 40px;
 }
 
-.footer-brand i {
+.footer .brand i {
     font-size: 32px;
     color: var(--primary);
     margin-bottom: 8px;
 }
 
-.footer-brand h3 {
+.footer .brand h3 {
     font-size: 24px;
     color: white;
     margin-bottom: 4px;
 }
 
-.footer-brand p {
+.footer .brand p {
     font-size: 15px;
 }
 
-.footer-links h4 {
+.footer .links h4 {
     color: white;
     margin-bottom: 12px;
 }
 
-.footer-links ul li {
+.footer .links ul li {
     padding: 4px 0;
 }
 
-.footer-links ul li a {
+.footer .links ul li a {
     font-size: 14px;
-    transition: var(--transition);
+    transition: 0.3s;
 }
 
-.footer-links ul li a:hover {
+.footer .links ul li a:hover {
     color: var(--primary);
 }
 
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+.footer .bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
     padding-top: 20px;
     text-align: center;
 }
 
-.footer-bottom p {
+.footer .bottom p {
     font-size: 14px;
 }
 
-.footer-note {
+.footer .bottom .note {
     font-size: 13px;
     opacity: 0.6;
     margin-top: 4px;
 }
 
-/* ----- Animations ----- */
-/* Keyframe animations used throughout the site */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Animations */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
 }
 
 @keyframes pulse {
-    0%,
-    100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
-/* ----- Responsive Design ----- */
-/* The site adapts to different screen sizes using media queries.
-   Tablet: 1024px and below
-   Mobile: 768px and below
-   Small mobile: 480px and below */
-
+/* Responsive */
 @media (max-width: 1024px) {
-    .hero-title {
-        font-size: 40px;
-    }
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .tools-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .dashboard-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .hero .title { font-size: 40px; }
+    .features .grid { grid-template-columns: repeat(2, 1fr); }
+    .tools .grid { grid-template-columns: 1fr 1fr; }
+    .dashboard .grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-    /* Hide navigation on mobile, show hamburger menu */
-    .navbar {
-        display: none;
-    }
+    .navbar { display: none; }
     .navbar.open {
         display: block;
         position: absolute;
@@ -1089,100 +927,43 @@ ul {
         right: 0;
         background: white;
         padding: 20px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        border-radius: 0 0 var(--radius) var(--radius);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        border-radius: 0 0 20px 20px;
     }
     .navbar.open ul {
         flex-direction: column;
         gap: 12px;
     }
+    .menu-btn { display: block; }
     
-    .menu-btn {
-        display: block;
-    }
-    
-    /* Hero becomes single column on mobile */
     .hero .container {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    .hero-buttons {
-        justify-content: center;
-    }
-    .hero-stats {
-        justify-content: center;
-    }
-    .hero-title {
-        font-size: 32px;
-    }
-    .hero-illustration {
-        width: 300px;
-        height: 300px;
-    }
-    .circle-animation {
-        width: 180px;
-        height: 180px;
-    }
-    .circle-animation i {
-        font-size: 50px;
-    }
+    .hero .btns { justify-content: center; }
+    .hero .stats { justify-content: center; }
+    .hero .title { font-size: 32px; }
+    .hero .illustration { width: 300px; height: 300px; }
+    .hero .circle { width: 180px; height: 180px; }
+    .hero .circle i { font-size: 50px; }
     
-    /* Grid layouts become single column */
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    .tools-grid {
-        grid-template-columns: 1fr;
-    }
-    .dashboard-grid {
-        grid-template-columns: 1fr;
-    }
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+    .about .grid { grid-template-columns: 1fr; }
+    .features .grid { grid-template-columns: 1fr; }
+    .tools .grid { grid-template-columns: 1fr; }
+    .dashboard .grid { grid-template-columns: 1fr; }
+    .footer .content { grid-template-columns: 1fr; text-align: center; }
     
-    .section-title {
-        font-size: 28px;
-    }
-    .hero-stats {
-        flex-direction: column;
-        gap: 16px;
-        align-items: center;
-    }
-    .grounding-steps {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .chart-bars {
-        height: 120px;
-    }
+    .title h2 { font-size: 28px; }
+    .hero .stats { flex-direction: column; gap: 16px; align-items: center; }
+    .groundSteps { grid-template-columns: repeat(3, 1fr); }
+    .chartBars { height: 120px; }
 }
 
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 28px;
-    }
-    .hero-illustration {
-        width: 220px;
-        height: 220px;
-    }
-    .circle-animation {
-        width: 140px;
-        height: 140px;
-    }
-    .circle-animation i {
-        font-size: 40px;
-    }
-    .float-icon {
-        width: 36px;
-        height: 36px;
-        font-size: 16px;
-    }
-    .btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
+    .hero .title { font-size: 28px; }
+    .hero .illustration { width: 220px; height: 220px; }
+    .hero .circle { width: 140px; height: 140px; }
+    .hero .circle i { font-size: 40px; }
+    .hero .floating .icon { width: 36px; height: 36px; font-size: 16px; }
+    .btn { padding: 10px 20px; font-size: 14px; }
 }
