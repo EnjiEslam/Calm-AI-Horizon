@@ -1,123 +1,391 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calm AI - Panic Attack Assistant</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calm AI - دعم نوبات الهلع</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header>
-        <h2>Calm AI</h2>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#problem">Problem</a>
-            <a href="#solution">Solution</a>
-            <a href="#features">Features</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <h1>Calm AI</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home" class="active">الرئيسية</a></li>
+                    <li><a href="#about">عن المشروع</a></li>
+                    <li><a href="#features">المميزات</a></li>
+                    <li><a href="#tools">الأدوات</a></li>
+                    <li><a href="#dashboard">لوحة التحكم</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="langBtn" class="lang-btn">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                </button>
+                <button id="menuBtn" class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <section id="home">
-        <h1>Calm AI</h1>
-        <h2>From Prediction To Prevention</h2>
-        <p>
-            Calm AI is an intelligent platform that helps people predict, manage and reduce panic attacks.
-        </p>
-        <button>Get Started</button>
-    </section>
-
-    <section id="about">
-        <h2>About Calm AI</h2>
-        <p>Calm AI is an AI-powered platform designed to support people who experience panic attacks.</p>
-        <p>The platform combines Artificial Intelligence, Wearable Devices and Health Analytics.</p>
-    </section>
-
-    <section id="problem">
-        <h2>The Problem</h2>
-        <p>Millions of people suffer from panic attacks every day. These moments are scary and cause hard symptoms:</p>
-        <ul>
-            <li>Fast Heart Rate</li>
-            <li>Difficulty Breathing</li>
-            <li>Dizziness</li>
-            <li>Fear and Stress</li>
-            <li>Unable to ask for help when it happens</li>
-        </ul>
-    </section>
-
-    <section id="solution">
-        <h2>Our Solution</h2>
-        <p>Calm AI analyzes user health data to predict panic attacks before they happen.</p>
-        <ul>
-            <li>Predict Panic Attacks early</li>
-            <li>Breathing Exercises to calm down</li>
-            <li>AI Personal Recommendations</li>
-            <li>Emergency Support Mode</li>
-            <li>Health Dashboard to see statistics</li>
-        </ul>
-    </section>
-
-    <section id="features">
-        <h2>Calm AI Main Features</h2>
-        
-        <div class="feature-box">
-            <h3>1. AI Panic Risk Analysis</h3>
-            <p>Our app connects with smart watches to check your heart rate. If it goes too high, the app knows you feel stressed.</p>
-        </div>
-
-        <div class="feature-box">
-            <h3>2. Interactive Breathing Box</h3>
-            <p>A simple screen that guides you how to breathe in and out slowly when you feel panic symptoms.</p>
-        </div>
-
-        <div class="feature-box">
-            <h3>3. Grounding Technique (5-4-3-2-1)</h3>
-            <p>A mental game to help you focus on your room and environment instead of the fear inside your head.</p>
-        </div>
-
-        <div class="feature-box">
-            <h3>4. Emergency Support Mode</h3>
-            <p>One big button to send an alert message to your family or call a helper if the attack is very strong.</p>
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="content">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>دعم فوري لنوبات الهلع</span>
+                </div>
+                <h1 class="title">
+                    <span class="blue">Calm AI</span>
+                    <br />
+                    مساعدك الذكي<br />
+                    لتجاوز نوبات الهلع
+                </h1>
+                <p class="desc">
+                    نوبات الهلع تحدث فجأة وتسبب أعراضًا مثل خفقان القلب وصعوبة التنفس.
+                    <br />
+                    <strong>Calm AI</strong> هنا لمساعدتك في لحظاتك الصعبة.
+                </p>
+                <div class="btns">
+                    <a href="#tools" class="btn primary">
+                        <i class="fas fa-play"></i>
+                        ابدأ الآن
+                    </a>
+                    <a href="#about" class="btn secondary">
+                        <i class="fas fa-info-circle"></i>
+                        اعرف أكثر
+                    </a>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="num">24/7</span>
+                        <span class="label">دعم مستمر</span>
+                    </div>
+                    <div class="stat">
+                        <span class="num">AI</span>
+                        <span class="label">مساعد ذكي</span>
+                    </div>
+                    <div class="stat">
+                        <span class="num">100%</span>
+                        <span class="label">مجاني</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="illustration">
+                    <div class="circle">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="floating">
+                        <span class="icon heart"><i class="fas fa-heart"></i></span>
+                        <span class="icon breath"><i class="fas fa-wind"></i></span>
+                        <span class="icon calm"><i class="fas fa-spa"></i></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-        
-        <div class="faq-item">
-            <h4>Q1: What is a panic attack?</h4>
-            <p>A1: It is a sudden feeling of intense fear or anxiety that triggers severe physical reactions when there is no real danger.</p>
-        </div>
-
-        <div class="faq-item">
-            <h4>Q2: How does Calm AI help me?</h4>
-            <p>A2: It monitors your heart rate and sends a warning before the attack happens, so you can start breathing exercises early.</p>
-        </div>
-
-        <div class="faq-item">
-            <h4>Q3: Is my health data safe with Calm AI?</h4>
-            <p>A3: Yes, your privacy is important to us. All your biological data is encrypted and secure.</p>
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="title">
+                <span class="tag">عن المشروع</span>
+                <h2>ليه <span class="blue">Calm AI</span>؟</h2>
+                <p class="desc">
+                    نوبات الهلع تحدث فجأة وقد تسبب أعراضًا مثل تسارع ضربات القلب،
+                    صعوبة التنفس، الدوخة، والخوف الشديد. Calm AI هنا لتقديم دعم سريع وبسيط.
+                </p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon"><i class="fas fa-clock"></i></div>
+                    <h3>استجابة فورية</h3>
+                    <p>دعم سريع في لحظة النوبة لمساعدتك على تخطيها بأمان</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-heart"></i></div>
+                    <h3>فهم المشاعر</h3>
+                    <p>نساعدك تفهم مشاعرك وتتعرف على مسببات النوبة</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>دعم بدون حكم</h3>
+                    <p>مساحة آمنة لتتحدث عن تجربتك بدون خوف أو حرج</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Do you have any questions or want to give feedback? Write to us below:</p>
-        <form>
-            <label>Your Name:</label><br>
-            <input type="text" name="username" placeholder="Enter your name"><br><br>
-            
-            <label>Your Email:</label><br>
-            <input type="email" name="useremail" placeholder="Enter your email"><br><br>
-            
-            <label>Your Message:</label><br>
-            <textarea name="usermessage" placeholder="Write your message here..."></textarea><br><br>
-            
-            <button type="button">Send Message</button>
-        </form>
+    <!-- Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="title">
+                <span class="tag">المميزات</span>
+                <h2>إيه اللي بيميز <span class="blue">Calm AI</span>؟</h2>
+                <p class="desc">
+                    مجموعة من الأدوات المصممة خصيصًا لدعمك في لحظات الهلع
+                </p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>تحليل المخاطر</h3>
+                    <p>تحليل بسيط لحالتك وتقدير مخاطر النوبة</p>
+                    <span class="tag">ذكاء</span>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-lungs"></i></div>
+                    <h3>تمارين التنفس</h3>
+                    <p>تمارين تنفس موجهة تساعدك على الهدوء واستعادة السيطرة</p>
+                    <span class="tag">تمارين</span>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-tree"></i></div>
+                    <h3>تقنية التأريض</h3>
+                    <p>تقنية 5-4-3-2-1 لمساعدتك على العودة للحاضر</p>
+                    <span class="tag">تأريض</span>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>وضع الطوارئ</h3>
+                    <p>دعم فوري في حالات الطوارئ مع إرشادات واضحة</p>
+                    <span class="tag">طوارئ</span>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>توصيات شخصية</h3>
+                    <p>نصائح مخصصة بناءً على حالتك وتجربتك</p>
+                    <span class="tag">توصيات</span>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>لوحة التحكم</h3>
+                    <p>متابعة تقدمك وتحليل أنماط النوبات مع الوقت</p>
+                    <span class="tag">تحليل</span>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- Tools -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <div class="title">
+                <span class="tag">الأدوات</span>
+                <h2>أدوات <span class="blue">الدعم</span></h2>
+                <p class="desc">
+                    اختار الأداة المناسبة لحالتك واحصل على الدعم الفوري
+                </p>
+            </div>
+            <div class="grid">
+                
+                <!-- Breathing -->
+                <div class="toolBox" id="breathingTool">
+                    <div class="toolHead">
+                        <div class="icon"><i class="fas fa-lungs"></i></div>
+                        <h3>تمارين التنفس</h3>
+                    </div>
+                    <div class="toolBody">
+                        <div class="breathCircle" id="breathCircle">
+                            <span id="breathText">شهيق</span>
+                        </div>
+                        <div class="breathControls">
+                            <button class="toolBtn" id="startBreath">
+                                <i class="fas fa-play"></i> ابدأ
+                            </button>
+                            <button class="toolBtn" id="stopBreath">
+                                <i class="fas fa-stop"></i> إيقاف
+                            </button>
+                        </div>
+                        <div class="breathInfo">
+                            <span id="breathCount">0</span>
+                            <span>دورة</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grounding -->
+                <div class="toolBox" id="groundingTool">
+                    <div class="toolHead">
+                        <div class="icon"><i class="fas fa-tree"></i></div>
+                        <h3>تقنية التأريض 5-4-3-2-1</h3>
+                    </div>
+                    <div class="toolBody">
+                        <div class="groundSteps">
+                            <div class="step" data-step="5">
+                                <span class="num">5</span>
+                                <span class="label">أشياء تراها</span>
+                            </div>
+                            <div class="step" data-step="4">
+                                <span class="num">4</span>
+                                <span class="label">أشياء تلمسها</span>
+                            </div>
+                            <div class="step" data-step="3">
+                                <span class="num">3</span>
+                                <span class="label">أشياء تسمعها</span>
+                            </div>
+                            <div class="step" data-step="2">
+                                <span class="num">2</span>
+                                <span class="label">أشياء تشمها</span>
+                            </div>
+                            <div class="step" data-step="1">
+                                <span class="num">1</span>
+                                <span class="label">شيء تتذوقه</span>
+                            </div>
+                        </div>
+                        <button class="toolBtn primary" id="startGrounding">
+                            <i class="fas fa-play"></i> ابدأ التأريض
+                        </button>
+                        <div class="groundProgress">
+                            <div class="bar" id="groundingProgress"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Emergency -->
+                <div class="toolBox emergency" id="emergencyTool">
+                    <div class="toolHead">
+                        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                        <h3>وضع الطوارئ</h3>
+                    </div>
+                    <div class="toolBody">
+                        <div class="emergencyContent">
+                            <i class="fas fa-exclamation-triangle emergencyIcon"></i>
+                            <p>إذا كانت النوبة شديدة، اتبع هذه الإرشادات:</p>
+                            <ul class="emergencyList">
+                                <li><i class="fas fa-check"></i> اتصل بالطبيب فورًا</li>
+                                <li><i class="fas fa-check"></i> اذهب لأقرب مستشفى</li>
+                                <li><i class="fas fa-check"></i> أخبر شخصًا قريبًا منك</li>
+                            </ul>
+                            <button class="emergencyBtn" id="emergencyBtn">
+                                <i class="fas fa-phone"></i> طلب مساعدة
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <div class="title">
+                <span class="tag">لوحة التحكم</span>
+                <h2>تتبع <span class="blue">تقدمك</span></h2>
+                <p class="desc">
+                    تابع حالتك وحلل أنماط النوبات مع الوقت
+                </p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="info">
+                        <span class="label">عدد النوبات هذا الأسبوع</span>
+                        <span class="value" id="weeklyPanics">0</span>
+                    </div>
+                    <div class="change good">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>أقل من الأسبوع الماضي</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-heart"></i></div>
+                    <div class="info">
+                        <span class="label">متوسط ضربات القلب</span>
+                        <span class="value" id="avgHeartRate">72</span>
+                        <span class="unit">BPM</span>
+                    </div>
+                    <div class="change neutral">
+                        <i class="fas fa-minus"></i>
+                        <span>مستقر</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-moon"></i></div>
+                    <div class="info">
+                        <span class="label">متوسط ساعات النوم</span>
+                        <span class="value" id="avgSleep">6.5</span>
+                        <span class="unit">ساعات</span>
+                    </div>
+                    <div class="change bad">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>أقل من المطلوب</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fas fa-spa"></i></div>
+                    <div class="info">
+                        <span class="label">حالة الهدوء</span>
+                        <span class="value" id="calmScore">78</span>
+                        <span class="unit">%</span>
+                    </div>
+                    <div class="change good">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>تحسن</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chartBox">
+                <h4>تحليل النوبات خلال الشهر</h4>
+                <div class="chartBars" id="chartBars">
+                    <div class="bar" style="height: 30%;"><span>أسبوع 1</span></div>
+                    <div class="bar" style="height: 50%;"><span>أسبوع 2</span></div>
+                    <div class="bar" style="height: 70%;"><span>أسبوع 3</span></div>
+                    <div class="bar" style="height: 40%;"><span>أسبوع 4</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="content">
+                <div class="brand">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Calm AI</h3>
+                    <p>مساعدك الذكي لتجاوز نوبات الهلع</p>
+                </div>
+                <div class="links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">عن المشروع</a></li>
+                        <li><a href="#features">المميزات</a></li>
+                        <li><a href="#tools">الأدوات</a></li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <h4>موارد</h4>
+                    <ul>
+                        <li><a href="#">الدعم النفسي</a></li>
+                        <li><a href="#">نصائح يومية</a></li>
+                        <li><a href="#">قصص وتجارب</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>Made by Enji Eslam</p>
+                <p class="note">Hack Club Horizons Project</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
